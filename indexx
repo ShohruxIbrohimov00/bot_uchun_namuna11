@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yxatdan O'tish</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Ro'yxatdan O'tish</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Ism va Familiya:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Sinfi yoki Holati:</label>
+                <select id="status" name="status" required>
+                    <option value="">Tanlang</option>
+                    <option value="6-11">Sinfi (6-11)</option>
+                    <option value="parent">Ota-ona</option>
+                    <option value="student">Talaba</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Tanlangan Kurs:</label>
+                <select id="course" name="course" required>
+                    <option value="python">Python (Back-End)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefon Raqami:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Yuborish</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
