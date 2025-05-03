@@ -1,0 +1,19 @@
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Foydalanuvchidan ma'lumotlarni olish
+    const name = document.getElementById('name').value;
+    const status = document.getElementById('status').value;
+    const course = document.getElementById('course').value;
+    const phone = document.getElementById('phone').value;
+
+    // LocalStorage'ga saqlash (xohlasangiz backendga yuboring)
+    const userData = { name, status, course, phone };
+    localStorage.setItem('userData', JSON.stringify(userData));
+
+    // Foydalanuvchiga muvaffaqiyatli ro'yxatdan o'tgani haqida xabar berish
+    alert('Ro\'yxatdan o\'tdingiz!');
+
+    // Sahifani yangilash
+    window.location.href = 'data.html';
+});
